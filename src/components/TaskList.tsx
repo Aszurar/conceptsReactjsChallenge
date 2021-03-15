@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import '../styles/tasklist.scss'
 
 import { FiTrash, FiCheckSquare } from 'react-icons/fi'
@@ -14,16 +13,45 @@ export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
-  function handleCreateNewTask() {
+  function handleCreateNewTask(){
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+    
+    if (newTaskTitle === '') {
+        // throw new Error('Não é permitido criar uma tarefa sem título, por favor, tente novamente.'); 
+        alert('Não é permitido criar uma tarefa sem título, por favor, tente novamente.');
+        return -1;
+    }
+
+    const task: Task = {
+      id: Math.random(),
+      title: newTaskTitle,
+      isComplete: false
+    }    
+    
+    setTasks([...tasks, task]);
   }
 
   function handleToggleTaskCompletion(id: number) {
     // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+    const taskIndex = tasks.findIndex(task => task.id === id);
+    const newTask = {
+      ...tasks[taskIndex],
+    }
+
+    tasks[taskIndex].isComplete ? newTask.isComplete = false : newTask.isComplete = true;
+
+    const newTasks = tasks.filter(tasks => tasks.id !== id); 
+
+    setTasks([...newTasks, newTask]);
+    
   }
 
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
+    const newTasks = tasks.filter(task => task.id !== id);
+
+    setTasks(newTasks);
+    
   }
 
   return (

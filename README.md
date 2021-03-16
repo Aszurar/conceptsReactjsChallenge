@@ -62,7 +62,7 @@ ___
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- [Node.js](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [React](https://pt-br.reactjs.org/)

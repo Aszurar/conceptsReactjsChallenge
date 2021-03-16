@@ -29,12 +29,15 @@ O projeto **to.do** é o 1º desafio técnico do bootcamp Ignite da Rocketseat e
   <img src="https://i.imgur.com/8JWymCe.png" width="800"> 
 
 * Tarefas Adicionadas:
+ 
   <img src="https://i.imgur.com/if02D2p.png" width="800">
 
 * Tarefas Marcadas:
+  
   <img src="https://i.imgur.com/GHEWxmh.png" width="800">
 
 * Aviso de não poder incluir uma tarefa sem título:
+  
   <img src="https://i.imgur.com/Jf7uvy0.png" width="800">
 
 * Versão Mobile:

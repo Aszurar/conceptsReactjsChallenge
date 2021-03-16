@@ -69,6 +69,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [React](https://pt-br.reactjs.org/)
+- [Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)
 ___
 ## :package: Como baixar e executar o projeto
 

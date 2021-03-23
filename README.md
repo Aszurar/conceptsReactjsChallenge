@@ -58,7 +58,7 @@ Pretendo adicionar algumas funcionalidades no futuro como:
 ___
 ## :seedling: Requisitos Mínimos
 
-Node.js, React e Typescript. 
+Node.js, Yarn(ou NPM), React e Typescript.
 
 ___
 ## :rocket: Tecnologias Utilizadas 

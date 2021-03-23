@@ -1,4 +1,4 @@
-# to.do | Ignite
+# to.do | Ignite - ReactJS
  O projeto **to.do** é um site de lista de afazeres em que podemos adicionar, remover e marcar uma tarefa feita.
 <h2 align="center">to.do</h2>
 

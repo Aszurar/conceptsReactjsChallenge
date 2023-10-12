@@ -1,13 +1,14 @@
-import { TaskList } from './components/TaskList'
-import { Header } from "./components/Header";
-import './styles/global.scss'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import './theme/global.css'
 
-
-export function App() {
+function App() {
   return (
-    <>
+    <div className="min-h-screen">
       <Header />
-      <TaskList />
-    </>
+      <Footer />
+    </div>
   )
 }
+
+export default App

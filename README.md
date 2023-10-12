@@ -1,93 +1,27 @@
-# to.do | Ignite - ReactJS
- O projeto **to.do** é um site de lista de afazeres em que podemos adicionar, remover e marcar uma tarefa feita.
-<h2 align="center">to.do</h2>
+# React + TypeScript + Vite
 
-___
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<h3 align="center">
-  <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
-  <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
-  <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
-  <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
-  <a href="#package-como-baixar-e-executar-o-projeto">Baixar e Executar</a>&nbsp;
-</h3>
+Currently, two official plugins are available:
 
-___
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-<div align="center" ><img src="https://media.giphy.com/media/nnk4pPrzQ40OehlPgE/giphy.gif" width="500"></div>
+## Expanding the ESLint configuration
 
-- [**Link do vídeo completo sobre o projeto**](https://www.youtube.com/watch?v=v-HpkF7uTlc)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-___
+- Configure the top-level `parserOptions` property like this:
 
-## :information_source: Sobre
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-O projeto **to.do** é o 1º desafio técnico do bootcamp Ignite da Rocketseat em que treinamos o conceito e a prática do uso de Estado no Reactjs.
-
-* Página Inicial:
- 
-  <img src="https://i.imgur.com/8JWymCe.png" width="800"> 
-
-* Tarefas Adicionadas:
- 
-  <img src="https://i.imgur.com/if02D2p.png" width="800">
-
-* Tarefas Marcadas:
-  
-  <img src="https://i.imgur.com/GHEWxmh.png" width="800">
-
-* Aviso de não poder incluir uma tarefa sem título:
-  
-  <img src="https://i.imgur.com/Jf7uvy0.png" width="800">
-
-* Versão Mobile:
- 
-  <img src="https://i.imgur.com/yvQ2ayQ.png" width="300">___________<img src="https://i.imgur.com/O9ZtXvB.png" width="300">
-  
-___
-## :interrobang: Motivo
-
-Esse projeto tem por objetivo por em prática os conceitos iniciais ensinados no curso **Ignite** de **Reactjs**. 
-
-Pretendo adicionar algumas funcionalidades no futuro como:
-1. Modo Noturno. 
-2. Pesquisa das tarefas.
-3. Edição dos nomes das tarefas.
-4. Paginação caso se tenha muitas tarefas adicionadas.
-
-___
-## :seedling: Requisitos Mínimos
-
-Node.js, Yarn(ou NPM), React e Typescript.
-
-___
-## :rocket: Tecnologias Utilizadas 
-
-O projeto foi desenvolvido utilizando as seguintes tecnologias
-
-- [Typescript](https://www.typescriptlang.org/)
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [React](https://pt-br.reactjs.org/)
-- [Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)
-___
-## :package: Como baixar e executar o projeto
-
-  - Clonar o projeto:
-    ```bash
-     git clone https://github.com/Aszurar/conceptsReactjsChallenge
-    ```
-  - É necessário a instalação do yarn de acordo com seu sistema operacional, para isso veja como no site do [Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)
-  - Instalação das dependências:
-    - Execute o comando abaixo dentro da pasta do projeto 
-    ```bash
-      yarn
-    ```
- 
- - Execução - Abra a pasta do projeto com alguma IDE(Vscode) ou simplesmente abra o terminal na pasta do projeto e execute o comando abaixo:
-    ```bash
-       yarn dev
-    ``` 
-___
-Desenvolvido por :star2: Lucas de Lima Martins de Souza.
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

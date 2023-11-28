@@ -37,7 +37,7 @@ export function Root({ label, link, children }: LinkButtonProps) {
         <Tooltip.Portal>
           <Tooltip.Content
             sideOffset={5}
-            className="rounded-nor text-todo_gray-900 animate-opacity box-shadow-tooltip box-shadow-focus transition-md bg-white px-3 py-1.5 font-medium"
+            className="rounded-nor bg-white px-3 py-1.5 font-medium text-todo_gray-900 transition-all duration-[200ms] animate-opacity box-shadow-tooltip box-shadow-focus"
             aria-label="."
           >
             {label}

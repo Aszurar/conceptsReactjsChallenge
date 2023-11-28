@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {   
+    :focus-visible {
+        @apply ring-2 ring-todo_blue-300 outline-none
+      }
+      
+    ::selection {
+        @apply text-white bg-todo_blue-300
+    }
+
+    html {
+        font-family: 'Poppins', sans-serif;
+        
+        @media (max-width: 480px) {
+            font-size: 87.5%;
+        }
+    }
+
+}

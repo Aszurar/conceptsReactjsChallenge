@@ -8,8 +8,17 @@ export default {
       borderRadius: {
         nor: '4px',
       },
+      height: {
+        height: 'calc(100vh - 17.75rem - 3.5rem)',
+      },
+      boxShadow: {
+        boxShadow: '0 2px 10px text-black',
+      },
       colors: {
         todo_blue: {
+          50: '#E8EBFD',
+          300: '#748DFB',
+          400: '#3853FF',
           500: '#273FAD',
         },
         todo_green: {
@@ -22,7 +31,8 @@ export default {
           100: '#EBEBEB',
           500: '#A09CB1',
           600: '#3D3D4D',
-          900: '#1C1C29',
+          800: '#1C1C29',
+          900: '#121214',
         },
       },
     },
@@ -43,8 +53,11 @@ export default {
         '.box-shadow-focus': {
           'box-shadow': '0 0 0 2px #FFFFFF',
         },
-        '.transition-md': {
-          transition: 'all 0.4s',
+        '.filter-dropShadow': {
+          filter: `drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06))`,
+        },
+        '.filter-brightness': {
+          filter: 'brightness(1.15)',
         },
       })
     }),

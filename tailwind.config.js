@@ -14,6 +14,9 @@ export default {
       boxShadow: {
         boxShadow: '0 2px 10px text-black',
       },
+      screens: {
+        xs: '420px',
+      },
       colors: {
         todo_blue: {
           50: '#E8EBFD',
@@ -49,9 +52,6 @@ export default {
           'box-shadow':
             'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
           'user-select': 'none',
-        },
-        '.box-shadow-focus': {
-          'box-shadow': '0 0 0 2px #FFFFFF',
         },
         '.filter-dropShadow': {
           filter: `drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06))`,

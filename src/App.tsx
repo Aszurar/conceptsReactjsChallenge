@@ -1,25 +1,46 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
-import { FiCheckSquare } from 'react-icons/fi'
+import { ChangeEvent, FormEvent, useEffect, useReducer, useState } from 'react'
+import { FiCheckSquare, FiTrash2 } from 'react-icons/fi'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
+import { tasksReducer } from './reducer/tasks/reducer'
+import {
+  addNewTask,
+  checkAllTasks,
+  removeCheckedTasks,
+  removeTask,
+  toggleTask,
+  uncheckAllTasks,
+} from './reducer/tasks/action'
 
 import './theme/global.css'
 import { Button } from './components/Button'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import * as Input from './components/Input'
 import { TaskCard } from './components/TaskCard'
+import * as Input from './components/Input'
+import * as NavItem from './components/NavItem'
 
-import { TaskProps } from './dto/taskDTO'
+import { ListIcon } from './assets/icons/list'
+import { ListChecksIcon } from './assets/icons/listChecks'
+import { saveTasks } from './storage/tasks/saveTasks'
+import { tasksGetAll } from './storage/tasks/tasksGetAll'
 
 function App() {
   const [newTask, setNewTask] = useState('')
-  const [tasksList, setTasksList] = useState<TaskProps[]>([])
   const [errorMessage, setErrorMessage] = useState('')
+
+  const [tasksList, dispatch] = useReducer(tasksReducer, [], () => {
+    return tasksGetAll()
+  })
+
+  const [parent] = useAutoAnimate()
 
   function handleUpdateTask(event: ChangeEvent<HTMLInputElement>) {
     setNewTask(event.target.value)
+    setErrorMessage('')
   }
 
-  function handleUpdateTasksList(event: FormEvent<HTMLFormElement>) {
+  function handleAddNewTasksList(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
     if (newTask.trim() === '') {
@@ -41,28 +62,28 @@ function App() {
       createdAt: new Date(),
     }
 
-    setTasksList((prevState) => [...prevState, newTaskFormatted])
+    dispatch(addNewTask(newTaskFormatted))
     setNewTask('')
   }
 
   function handleCheckTask(id: string) {
-    const updatedTasksList = tasksList.map((task) => {
-      if (task.id === id) {
-        return {
-          ...task,
-          isChecked: !task.isChecked,
-        }
-      }
-
-      return task
-    })
-
-    setTasksList(updatedTasksList)
+    dispatch(toggleTask(id))
   }
 
   function handleDeleteTask(id: string) {
-    const newTasksList = tasksList.filter((task) => task.id !== id)
-    setTasksList(newTasksList)
+    dispatch(removeTask(id))
+  }
+
+  function handleCheckAllTasks() {
+    dispatch(checkAllTasks())
+  }
+
+  function handleUncheckedAllTasks() {
+    dispatch(uncheckAllTasks())
+  }
+
+  function handleDeleteAllCheckedTasks() {
+    dispatch(removeCheckedTasks())
   }
 
   const taskListComponent = tasksList.map((task) => (
@@ -77,24 +98,46 @@ function App() {
     />
   ))
 
+  useEffect(() => {
+    saveTasks(tasksList)
+  }, [tasksList])
+
   return (
     <div className="min-h-screen antialiased">
       <Header />
       <section className=" flex  h-height justify-center bg-todo_gray-100 px-4 py-10">
         <main
-          className="-mt-40 flex w-full max-w-[70rem] flex-col rounded-2xl bg-white px-14 py-16
-filter-dropShadow"
+          className=" -mt-48 flex w-full max-w-[70rem] flex-col rounded-2xl bg-white px-5 py-6 filter-dropShadow sm:-mt-40 sm:px-14
+sm:py-16"
         >
-          <header className="flex w-full  items-center justify-between gap-4">
-            <h1 className="text-3xl font-bold text-todo_gray-600">
+          <header className="relative flex w-full flex-col  justify-between gap-4 md:static md:flex-row md:items-center">
+            <h1 className="text-center text-3xl font-bold text-todo_gray-600  sm:justify-center md:text-start">
               Minhas tarefas
             </h1>
+            <div className=" xs:bottom-1 xs:left-0 xs:absolute flex items-center justify-center gap-3 md:static">
+              <NavItem.Root label="Desmarcar todas tarefas" variant="outline">
+                <Button variant="outline" onClick={handleUncheckedAllTasks}>
+                  <ListIcon className="h-5 w-5 fill-todo_blue-500 " />
+                </Button>
+              </NavItem.Root>
+              <NavItem.Root label="Marcar todas tarefas" variant="outline">
+                <Button variant="outline" onClick={handleCheckAllTasks}>
+                  <ListChecksIcon className="h-5 w-5 fill-todo_blue-500" />
+                </Button>
+              </NavItem.Root>
+
+              <NavItem.Root label="Deletar tarefas marcadas" variant="outline">
+                <Button variant="outline" onClick={handleDeleteAllCheckedTasks}>
+                  <FiTrash2 className="h-5 w-5 " />
+                </Button>
+              </NavItem.Root>
+            </div>
             <form
               id="teste"
-              onSubmit={handleUpdateTasksList}
-              className="flex items-center gap-1"
+              onSubmit={handleAddNewTasksList}
+              className="xs:items-end flex flex-col items-center sm:justify-center"
             >
-              <div>
+              <div className=" xs:w-3/5 flex w-full items-center gap-1 sm:w-72 ">
                 <Input.Root>
                   <Input.Control
                     value={newTask}
@@ -102,18 +145,28 @@ filter-dropShadow"
                     placeholder="Adicionar nova tarefa"
                   />
                 </Input.Root>
-                {errorMessage && (
-                  <Input.ErrorMessage>{errorMessage}</Input.ErrorMessage>
-                )}
-              </div>
 
-              <Button type="submit" form="teste" aria-label="Adicionar tarefa">
-                <FiCheckSquare className="h-4 w-4" />
-              </Button>
+                <Button
+                  type="submit"
+                  form="teste"
+                  aria-label="Adicionar tarefa"
+                  disabled={!!errorMessage}
+                >
+                  <FiCheckSquare className="h-4 w-4" />
+                </Button>
+              </div>
+              {errorMessage && (
+                <Input.ErrorMessage>{errorMessage}</Input.ErrorMessage>
+              )}
             </form>
           </header>
 
-          <section className="mt-12">{taskListComponent}</section>
+          <section
+            ref={parent}
+            className="mt-6 divide-y-2 overflow-y-auto overflow-x-hidden sm:mt-12"
+          >
+            {taskListComponent}
+          </section>
         </main>
       </section>
       <Footer />

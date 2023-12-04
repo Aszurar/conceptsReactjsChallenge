@@ -1,6 +1,6 @@
-import ShootingStarSVG from '../../assets/shooting-star.svg'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
-import { Github, Linkedin } from 'lucide-react'
+import ShootingStarSVG from '../../assets/shooting-star.svg'
 import * as NavItem from '../NavItem'
 
 export function Footer() {
@@ -18,11 +18,11 @@ export function Footer() {
           <a
             href="https://github.com/Aszurar/to.do"
             target="_blank"
-            className="flex  items-center justify-center text-gray-300 transition-all  hover:text-white focus:text-white"
+            className="flex items-center justify-center text-xl text-gray-300 transition-all  hover:text-white focus:text-white"
             aria-label="Acessar Github"
             rel="noreferrer"
           >
-            <Github />
+            <FiGithub />
           </a>
         </NavItem.Root>
 
@@ -30,11 +30,11 @@ export function Footer() {
           <a
             href="https://www.linkedin.com/in/lucas-de-lima-azsura/"
             target="_blank"
-            className="flex  items-center justify-center text-gray-300 transition-all  hover:text-white focus:text-white"
+            className="flex items-center justify-center text-xl text-gray-300 transition-all  hover:text-white focus:text-white"
             aria-label="Acessar Linkedin"
             rel="noreferrer"
           >
-            <Linkedin />
+            <FiLinkedin />
           </a>
         </NavItem.Root>
       </nav>

@@ -1,8 +1,8 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 
-import { TaskProps } from '../../dto/taskDTO'
 import { FiCheck } from 'react-icons/fi'
 import { tv } from 'tailwind-variants'
+import { TaskProps } from '../../dto/task'
 
 type TaskPropsWithoutCreatedAt = Omit<TaskProps, 'createdAt'>
 
@@ -37,9 +37,9 @@ export function CheckBox({
         id={id}
         checked={isChecked}
         className={` 
-        hover:ring-todo_blue-50 flex h-5 w-5 items-center justify-center 
-        rounded-md border-2 border-transparent bg-todo_gray-100 ring-1 
-        transition-all duration-[200ms] hover:border-2 hover:border-todo_blue-500 
+        flex h-5 w-5 items-center justify-center rounded-md 
+        border-2 border-transparent bg-todo_gray-100 ring-1 transition-all 
+        duration-[200ms] hover:border-2 hover:border-todo_blue-500 hover:ring-todo_blue-50 
         data-[state=checked]:bg-todo_blue-500 
         data-[state=unchecked]:bg-todo_gray-100`}
         onCheckedChange={handleCheckTask}

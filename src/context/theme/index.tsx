@@ -27,7 +27,6 @@ function ThemeProvider({ children }: ThemeProviderProps) {
   }, [])
 
   useEffect(() => {
-    console.log('isDarkMode', isDarkMode)
     const rootElement = window.document.documentElement
 
     if (isDarkMode) {

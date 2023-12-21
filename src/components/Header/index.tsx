@@ -26,7 +26,7 @@ export function Header() {
     >
       <div className="m-auto flex w-full max-w-app">
         <div className="flex flex-1 items-center justify-center">
-          <img src={LogoSVG} alt="to.do" />
+          <img src={LogoSVG} alt="to.do" width={90} height={30} />
         </div>
         <NavItem.Root label={label} onClick={handleToggleTheme}>
           <NavItem.Icon icon={icon} className="text-3xl sm:text-2xl" />

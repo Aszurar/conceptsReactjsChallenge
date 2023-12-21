@@ -105,39 +105,64 @@ function App() {
   return (
     <div className="min-h-screen antialiased">
       <Header />
-      <section className=" flex  h-height justify-center bg-todo_gray-100 px-4 py-10">
+      <section
+        className={`flex h-height justify-center bg-todo_gray-100 px-6
+        py-10 dark:bg-zinc-900 sm:px-8`}
+      >
         <main
-          className=" -mt-48 flex w-full max-w-[70rem] flex-col rounded-2xl bg-white px-5 py-6 filter-dropShadow sm:-mt-40 sm:px-14
-sm:py-16"
+          className={`-mt-48 flex w-full max-w-app flex-col rounded-2xl 
+          bg-white px-5 py-6 filter-dropShadow dark:bg-zinc-800 sm:-mt-40 
+          sm:px-14 sm:py-16`}
         >
-          <header className="relative flex w-full flex-col  justify-between gap-4 md:static md:flex-row md:items-center">
-            <h1 className="text-center text-3xl font-bold text-todo_gray-600  sm:justify-center md:text-start">
+          <header
+            className={`relative flex w-full flex-col  justify-between 
+              gap-4 md:static md:flex-row md:items-center`}
+          >
+            <h1
+              className={`text-center text-3xl font-bold text-todo_gray-600  
+                dark:text-white sm:justify-center md:text-start`}
+            >
               Minhas tarefas
             </h1>
-            <div className=" xs:bottom-1 xs:left-0 xs:absolute flex items-center justify-center gap-3 md:static">
-              <NavItem.Root label="Desmarcar todas tarefas" variant="outline">
-                <Button variant="outline" onClick={handleUncheckedAllTasks}>
-                  <ListIcon className="h-5 w-5 fill-todo_blue-500 " />
-                </Button>
+            <div
+              className={` flex items-center justify-center gap-3 xs:absolute 
+                  xs:bottom-1 xs:left-0 md:static`}
+            >
+              <NavItem.Root
+                label="Desmarcar todas tarefas"
+                variant="outline"
+                onClick={handleUncheckedAllTasks}
+              >
+                <ListIcon
+                  className={`h-5 w-5 fill-todo_blue-500 
+                    dark:fill-todo_blue-300`}
+                />
               </NavItem.Root>
-              <NavItem.Root label="Marcar todas tarefas" variant="outline">
-                <Button variant="outline" onClick={handleCheckAllTasks}>
-                  <ListChecksIcon className="h-5 w-5 fill-todo_blue-500" />
-                </Button>
+              <NavItem.Root
+                label="Marcar todas tarefas"
+                variant="outline"
+                onClick={handleCheckAllTasks}
+              >
+                <ListChecksIcon
+                  className={`h-5 w-5 fill-todo_blue-500 
+                    dark:fill-todo_blue-300`}
+                />
               </NavItem.Root>
 
-              <NavItem.Root label="Deletar tarefas marcadas" variant="outline">
-                <Button variant="outline" onClick={handleDeleteAllCheckedTasks}>
-                  <FiTrash2 className="h-5 w-5 " />
-                </Button>
+              <NavItem.Root
+                label="Deletar tarefas marcadas"
+                variant="outline"
+                onClick={handleDeleteAllCheckedTasks}
+              >
+                <FiTrash2 className="h-5 w-5 " />
               </NavItem.Root>
             </div>
             <form
               id="teste"
               onSubmit={handleAddNewTasksList}
-              className="xs:items-end flex flex-col items-center sm:justify-center"
+              className="flex flex-col items-center xs:items-end sm:justify-center"
             >
-              <div className=" xs:w-3/5 flex w-full items-center gap-1 sm:w-72 ">
+              <div className="flex w-full items-center gap-2 xs:w-3/5 sm:w-72">
                 <Input.Root>
                   <Input.Control
                     value={newTask}
@@ -163,7 +188,8 @@ sm:py-16"
 
           <section
             ref={parent}
-            className="mt-6 divide-y-2 overflow-y-auto overflow-x-hidden sm:mt-12"
+            className={`mt-6 divide-y-2 overflow-y-auto overflow-x-hidden 
+              dark:divide-zinc-600 sm:mt-12`}
           >
             {taskListComponent}
           </section>

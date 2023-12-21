@@ -1,10 +1,10 @@
 import { Button } from '../Button'
 import { CheckBox } from '../CheckBox'
-import { TaskProps } from '../../dto/taskDTO'
 import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { utcToZonedTime } from 'date-fns-tz'
 import { FiTrash } from 'react-icons/fi'
+import { TaskProps } from '../../dto/task'
 
 type TaskCardProps = TaskProps & {
   handleCheckTask: () => void

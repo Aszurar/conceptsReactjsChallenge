@@ -39,12 +39,17 @@ export function TaskCard({
     <article className="flex flex-col gap-0.5 p-4">
       <div className="flex items-center justify-between gap-3">
         <CheckBox {...props} id={id} />
-        <Button variant="ghost" onClick={handleDeleteTask}>
+        <Button
+          variant="ghost"
+          aria-label="Deletar tarefa"
+          onClick={handleDeleteTask}
+        >
           <FiTrash className="h-4 w-4" />
         </Button>
       </div>
       <time
-        className="text-right text-xs font-bold text-todo_blue-400"
+        className={`text-right text-xs font-bold text-todo_blue-400 
+          dark:text-todo_blue-300`}
         title={formattedZonedDate}
         dateTime={formattedDateUTCISO}
       >

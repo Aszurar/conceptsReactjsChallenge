@@ -2,11 +2,12 @@ import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       borderRadius: {
-        nor: '4px',
+        normal: '4px',
       },
       height: {
         height: 'calc(100vh - 17.75rem - 3.5rem)',
@@ -14,8 +15,15 @@ export default {
       boxShadow: {
         boxShadow: '0 2px 10px text-black',
       },
+      maxWidth: {
+        app: '70rem',
+      },
+
       screens: {
         xs: '420px',
+      },
+      transitionDuration: {
+        400: '400ms',
       },
       colors: {
         todo_blue: {
@@ -43,7 +51,7 @@ export default {
   plugins: [
     plugin(({ addUtilities }) => {
       addUtilities({
-        '.animate-opacity': {
+        '.animate-tooltip': {
           'animation-duration': '400ms',
           'animation-timing-function': 'cubic-bezier(0.16, 1, 0.3, 1)',
           'will-change': 'transform, opacity',

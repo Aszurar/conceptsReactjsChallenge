@@ -5,7 +5,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 const tooltip = tv({
   slots: {
     container: `rounded-normal bg-white px-3 py-1.5 text-sm font-medium 
-      text-todo_gray-900 transition-all duration-200 animate-tooltip 
+      text-todo_gray-900 transition-all duration-400 animate-tooltip 
       box-shadow-tooltip dark:border-todo_blue-300`,
     button: '',
     arrow: 'fill-white',
@@ -14,10 +14,11 @@ const tooltip = tv({
     variant: {
       outline: {
         container: `border border-todo_blue-500 text-todo_blue-500`,
-        button: `text-todo_blue-500 p-2 bg-todo_gray-100 
-        shadow-none rounded-md  border border-todo_gray-600 
-        hover:bg-transparent hover:scale-110
-        dark:bg-zinc-700 dark:text-todo_blue-300
+        button: `text-todo_blue-500 p-2 bg-todo_gray-100 transition-all 
+        duration-400 shadow-none rounded-md  border border-todo_gray-600 
+        hover:bg-transparent hover:scale-110 dark:bg-zinc-700 
+        dark:text-todo_blue-300
+        dark:hover:bg-zinc-800
         `,
         arrow: 'fill-todo_blue-500',
       },
@@ -53,9 +54,10 @@ export function Root({
     <Tooltip.Provider>
       <Tooltip.Root>
         <Tooltip.Trigger
+          asChild={asChild}
+          aria-label={label}
           onClick={onClick}
           className={button()}
-          asChild={asChild}
         >
           {children}
         </Tooltip.Trigger>

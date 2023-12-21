@@ -17,7 +17,7 @@ export function Footer() {
         <img src={ShootingStarSVG} alt="" className="inline-block h-5 w-5" />
       </strong>
       <nav className="flex items-center justify-center gap-2">
-        <NavItem.Root label="Acessar Github">
+        <NavItem.Root asChild={true} label="Acessar Github">
           <a
             href="https://github.com/Aszurar/to.do"
             target="_blank"
@@ -31,7 +31,7 @@ export function Footer() {
           </a>
         </NavItem.Root>
 
-        <NavItem.Root label="Acessar Linkedin">
+        <NavItem.Root asChild={true} label="Acessar Linkedin">
           <a
             href="https://www.linkedin.com/in/lucas-de-lima-azsura/"
             target="_blank"

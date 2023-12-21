@@ -24,6 +24,9 @@ import { ListIcon } from './assets/icons/list'
 import { ListChecksIcon } from './assets/icons/listChecks'
 import { saveTasks } from './storage/tasks/saveTasks'
 import { tasksGetAll } from './storage/tasks/tasksGetAll'
+import { axeAccessibilityReporter } from './utils/axeAccessibilityReporter'
+
+axeAccessibilityReporter()
 
 function App() {
   const [newTask, setNewTask] = useState('')

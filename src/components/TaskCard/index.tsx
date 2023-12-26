@@ -48,7 +48,7 @@ export function TaskCard({
         </Button>
       </div>
       <time
-        className={`text-right text-xs font-bold text-todo_blue-400 
+        className={`text-right text-xs font-semibold text-todo_blue-400 
           dark:text-todo_blue-300`}
         title={formattedZonedDate}
         dateTime={formattedDateUTCISO}

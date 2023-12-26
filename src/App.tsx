@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useEffect, useReducer, useState } from 'react'
+import * as Dialog from '@radix-ui/react-dialog'
 import { FiCheckSquare, FiTrash2 } from 'react-icons/fi'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-
 import { tasksReducer } from './reducer/tasks/reducer'
 import {
   addNewTask,
@@ -25,6 +25,7 @@ import { ListChecksIcon } from './assets/icons/listChecks'
 import { saveTasks } from './storage/tasks/saveTasks'
 import { tasksGetAll } from './storage/tasks/tasksGetAll'
 import { axeAccessibilityReporter } from './utils/axeAccessibilityReporter'
+import { EmptyList } from './components/EmptyList'
 
 axeAccessibilityReporter()
 
@@ -37,6 +38,9 @@ function App() {
   })
 
   const [parent] = useAutoAnimate()
+
+  const isThereTasks = tasksList.length > 0
+  const isThereCheckedTasks = tasksList.some((task) => task.isChecked)
 
   function handleUpdateTask(event: ChangeEvent<HTMLInputElement>) {
     setNewTask(event.target.value)
@@ -89,17 +93,21 @@ function App() {
     dispatch(removeCheckedTasks())
   }
 
-  const taskListComponent = tasksList.map((task) => (
-    <TaskCard
-      key={task.id}
-      id={task.id}
-      title={task.title}
-      isChecked={task.isChecked}
-      createdAt={task.createdAt}
-      handleDeleteTask={() => handleDeleteTask(task.id)}
-      handleCheckTask={() => handleCheckTask(task.id)}
-    />
-  ))
+  const taskListComponent = isThereTasks ? (
+    tasksList.map((task) => (
+      <TaskCard
+        key={task.id}
+        id={task.id}
+        title={task.title}
+        isChecked={task.isChecked}
+        createdAt={task.createdAt}
+        handleDeleteTask={() => handleDeleteTask(task.id)}
+        handleCheckTask={() => handleCheckTask(task.id)}
+      />
+    ))
+  ) : (
+    <EmptyList />
+  )
 
   useEffect(() => {
     saveTasks(tasksList)
@@ -122,7 +130,7 @@ function App() {
               gap-4 md:static md:flex-row md:items-center`}
           >
             <h1
-              className={`text-center text-3xl font-bold text-todo_gray-600  
+              className={`text-center text-3xl font-semibold text-todo_gray-600  
                 dark:text-white sm:justify-center md:text-start`}
             >
               Minhas tarefas
@@ -134,6 +142,7 @@ function App() {
               <NavItem.Root
                 label="Desmarcar todas tarefas"
                 variant="outline"
+                isDisabled={!isThereTasks}
                 onClick={handleUncheckedAllTasks}
               >
                 <ListIcon
@@ -144,6 +153,7 @@ function App() {
               <NavItem.Root
                 label="Marcar todas tarefas"
                 variant="outline"
+                isDisabled={!isThereTasks}
                 onClick={handleCheckAllTasks}
               >
                 <ListChecksIcon
@@ -152,14 +162,58 @@ function App() {
                 />
               </NavItem.Root>
 
-              <NavItem.Root
-                label="Deletar tarefas marcadas"
-                variant="outline"
-                onClick={handleDeleteAllCheckedTasks}
-              >
-                <FiTrash2 className="h-5 w-5 " />
-              </NavItem.Root>
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <NavItem.Root
+                    label="Deletar tarefas marcadas"
+                    variant="outline"
+                    isDisabled={!isThereTasks || !isThereCheckedTasks}
+                  >
+                    <FiTrash2 className="h-5 w-5 " />
+                  </NavItem.Root>
+                </Dialog.Trigger>
+
+                <Dialog.Portal>
+                  <Dialog.Overlay className="bg-todo_dark-50 fixed inset-0">
+                    <Dialog.Content
+                      className={`fixed left-1/2 top-1/2 mx-auto my-0 flex 
+                      w-80 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col gap-4 rounded-xl 
+                      border-4 border-todo_blue-300 bg-white 
+                      p-6  dark:bg-zinc-800 sm:w-full sm:p-12`}
+                    >
+                      <Dialog.Title
+                        className={`text-center text-2xl font-semibold 
+                        text-todo_gray-800 dark:text-white`}
+                      >
+                        Excluir comentário
+                      </Dialog.Title>
+                      <Dialog.Description
+                        className={`text-center text-lg
+                         text-gray-600 dark:text-todo_gray-500`}
+                      >
+                        Você tem certeza que gostaria de excluir este
+                        comentário?
+                      </Dialog.Description>
+                      <footer className="flex items-center justify-center gap-4">
+                        <Dialog.Close asChild className="w-full">
+                          <Button variant="modal">Cancelar</Button>
+                        </Dialog.Close>
+                        <Dialog.Close className="w-full">
+                          <Button
+                            variant="modal"
+                            onClick={handleDeleteAllCheckedTasks}
+                            className={`text-todo_red-500 dark:text-red-400`}
+                          >
+                            Sim, excluir
+                          </Button>
+                        </Dialog.Close>
+                      </footer>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog.Portal>
+              </Dialog.Root>
             </div>
+
             <form
               id="teste"
               onSubmit={handleAddNewTasksList}

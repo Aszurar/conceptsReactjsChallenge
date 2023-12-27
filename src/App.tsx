@@ -179,8 +179,7 @@ function App() {
                 label="Marcar todas tarefas"
                 variant="outline"
                 isDisabled={!isThereTasks}
-                // onClick={handleCheckAllTasks}
-                onClick={dasdsadas}
+                onClick={handleCheckAllTasks}
               >
                 <ListChecksIcon
                   className={`h-5 w-5 fill-todo_blue-500 

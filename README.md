@@ -99,10 +99,8 @@ lista de tarefas.
 - **Campos preenchidos**
 
   <div align="center" >
-      <img src="https://i.imgur.com/YNCL4G2.png" width="420">
-      <img src="https://i.imgur.com/Q0sWWZm.png" width="420">
-      <img src="https://i.imgur.com/OJg74mE.png" width="420">
-      <img src="https://i.imgur.com/Kz9U7hJ.png" width="420">
+      <img src="https://i.imgur.com/YNCL4G2.png" width="400">_<img src="https://i.imgur.com/Q0sWWZm.png" width="400">
+      <img src="https://i.imgur.com/OJg74mE.png" width="400">_<img src="https://i.imgur.com/Kz9U7hJ.png" width="400">
   </div>
 
 ---
@@ -167,9 +165,9 @@ lista de tarefas.
 **Responsividade**
 
 <div align="center" >
-      <img src="https://i.imgur.com/aDZUgHG.png" width="300">
-      <img src="https://i.imgur.com/2z6UBlb.png" width="300">
-      <img src="https://i.imgur.com/HgtKe0N.png" width="300">
+      <img src="https://i.imgur.com/aDZUgHG.png" width="270">
+      <img src="https://i.imgur.com/2z6UBlb.png" width="270">
+      <img src="https://i.imgur.com/HgtKe0N.png" width="270">
 </div>
 
 

@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useEffect, useReducer, useState } from 'react'
+import * as Sentry from '@sentry/react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { FiCheckSquare, FiTrash2 } from 'react-icons/fi'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
@@ -28,6 +29,30 @@ import { axeAccessibilityReporter } from './utils/axeAccessibilityReporter'
 import { EmptyList } from './components/EmptyList'
 
 axeAccessibilityReporter()
+
+// ...
+
+Sentry.init({
+  dsn: 'https://32649f07ffe6607d254f7b87a95e8062@o4505921743552512.ingest.sentry.io/4506469302272000',
+  integrations: [
+    new Sentry.BrowserTracing({
+      // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+      tracePropagationTargets: [
+        'localhost',
+        /^https:\/\/todo-aszurar\.netlify\.app\//,
+      ],
+    }),
+    new Sentry.Replay({
+      maskAllText: false,
+      blockAllMedia: false,
+    }),
+  ],
+  // Performance Monitoring
+  tracesSampleRate: 1.0, //  Capture 100% of the transactions
+  // Session Replay
+  replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+  replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+})
 
 function App() {
   const [newTask, setNewTask] = useState('')
@@ -154,7 +179,8 @@ function App() {
                 label="Marcar todas tarefas"
                 variant="outline"
                 isDisabled={!isThereTasks}
-                onClick={handleCheckAllTasks}
+                // onClick={handleCheckAllTasks}
+                onClick={dasdsadas}
               >
                 <ListChecksIcon
                   className={`h-5 w-5 fill-todo_blue-500 

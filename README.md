@@ -38,12 +38,12 @@ lista de tarefas.
 ---
 
 <div align="center">
-    <img src="https://" width="1000">
+    <img src="https://i.imgur.com/JUTlzuT.gif" width="1000">
 </div>
 
 <div align="center" >
 
-**[Link do vídeo completo sobre o projeto]()**
+**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=JYvJrERvdV4)**
 
 </div>
 
@@ -151,7 +151,7 @@ lista de tarefas.
   4. **[Date FNS](https://date-fns.org/)**
   5. **[JavaScript](https://developer.mozilla.org/pt1.BR/docs/Web/JavaScript)**
   6. **[Feather Icons](https://feathericons.com/)**
-  7. **[Phosphor Icons](https://lucide.dev/guide/packages/lucide-react)**
+  7. **[Phosphor Icons](https://phosphoricons.com/)**
   8. **[Netlify](https://www.netlify.com/)**
   9. **[NodeJS](https://nodejs.org/en/)**
   10. **[Radix UI](https://www.radix-ui.com/)**
@@ -160,7 +160,8 @@ lista de tarefas.
   13. **[TailwindCSS](https://tailwindcss.com/)**
   14. **[TailwindCSS Variants](https://www.tailwind-variants.org/)**
   15. **[TypeScript](https://www.typescriptlang.org/)**
-  16. **[Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)**
+  16. **[Vite](https://vitejs.dev/)**
+  17. **[Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)**
 
 **Responsividade**
 

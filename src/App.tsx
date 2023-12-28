@@ -17,7 +17,7 @@ import './theme/global.css'
 import { Button } from './components/Button'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import { TaskCard } from './components/TaskCard'
+import { TaskCardMemoized } from './components/TaskCard'
 import * as Input from './components/Input'
 import * as NavItem from './components/NavItem'
 
@@ -120,7 +120,7 @@ function App() {
 
   const taskListComponent = isThereTasks ? (
     tasksList.map((task) => (
-      <TaskCard
+      <TaskCardMemoized
         key={task.id}
         id={task.id}
         title={task.title}

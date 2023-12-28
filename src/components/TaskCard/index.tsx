@@ -5,6 +5,7 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { utcToZonedTime } from 'date-fns-tz'
 import { FiTrash } from 'react-icons/fi'
 import { TaskProps } from '../../dto/task'
+import { memo } from 'react'
 
 type TaskCardProps = TaskProps & {
   handleCheckTask: () => void
@@ -58,3 +59,7 @@ export function TaskCard({
     </article>
   )
 }
+
+export const TaskCardMemoized = memo(TaskCard, (prevProps, nextProps) => {
+  return prevProps.isChecked === nextProps.isChecked
+})

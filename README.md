@@ -54,8 +54,8 @@ lista de tarefas.
 - O projeto **to.do** é uma lista de tarefas simples, mas que foi abordado conceitos importantes para o desenvolvimento de interfaces com **tailwindcss** e React.
 - Praticamos conceitos básicos como componentização, composição, responsividade, acessibilidade, CI/CD, entre outros assim como nos projetos anteriores como o [tododark](https://github.com/Aszurar/tododark/).
 - Além disso, **abordarmos o uso do useReducer** e sua aplicação em conjunto com o **Context API** do React para o gerenciamento de estado da aplicação e separando a lógica em **actions** e **reducers**.
-- Além disso usamos bibliotecas que auxiliam na estilização com tailwindcss como **tailwind-variants** para criarmos variações dos componentes.
-- Esse projeto foi reformulado e refeito com tecnologias atuais a partir de um projeto de desafio da trilha de 2021 de React. Assim, temos algumas adições e incrementos como a criação do **tema escuro** e a possibilidade de trocar entre eles, a **construção do design do projeto no Figma**, dentre outros que serão abordados a seguir.
+- Usamos bibliotecas que auxiliam na estilização com tailwindcss como **tailwind-variants** para criarmos variações dos componentes.
+- Esse projeto foi reformulado e refeito com tecnologias atuais a partir de um projeto de desafio da trilha de 2021 de React da Rocketseat. Assim, temos algumas adições e incrementos como a criação do **tema escuro** e a possibilidade de trocar entre eles, a **construção do design do projeto no Figma**, dentre outros que serão abordados a seguir.
 - Usamos **[React](https://react.dev)** com **[TypeScript](https://www.typescriptlang.org/)** como principais tecnologias.
 - A animação da listagem é feita com a lib **[AutoAnimate](https://auto-animate.formkit.com/)**.
   
@@ -71,11 +71,6 @@ lista de tarefas.
 ## :interrobang: Motivo
 
 - Esse projeto tem o objetivo ensinar e praticar o uso do **React em conjunto tailwindcss** assim como outras ferramentas que podem auxiliar no desenvolvimento com essa tecnologia.
-- Principais tópicos abordados com **tailwindcss**:
-  - Entender e praticar construção de interfaces com **tailwindcss** aplicando responsividade, breakpoints e variações de componentes com **tailwindcss-variants** e **tailwindcss**;
-  - Animações com **AutoAnimate**;
-  - Componentes acessíveis com **Radix UI** e integração com **tailwindcss**;
-  - Troca de temas com **tailwindcss**;
 
 ### Funcionalidades novas em relação ao projeto original:  
   1. **Troca de temas** com **tailwindcss** respeitando o tema escolho no sistema operacional do usuário;
@@ -86,7 +81,7 @@ lista de tarefas.
   6. **Animação** na listagem de tarefas com **AutoAnimate**;
   7. **Componentes acessíveis** com **Radix UI** e integração com **tailwindcss**;
   8. **Uso do useReducer** e **Context API** do React para o gerenciamento de estado da aplicação em conjunto com a divisão da lógica de **actions** e **reducers** para o gerenciamento de estado;
-  9. **Responsividade** com **tailwindcss**;
+  9. Entender e praticar construção de interfaces com **tailwindcss** aplicando responsividade, breakpoints e variações de componentes com **tailwindcss-variants** e **tailwindcss**;
   10. **Acessibilidade** com **axe-core** e **ChromeVox**;
   11. **Publicação** com **CI/CD** por meio da plataforma **Netlify**.
 

@@ -30,8 +30,6 @@ import { EmptyList } from './components/EmptyList'
 
 axeAccessibilityReporter()
 
-// ...
-
 Sentry.init({
   dsn: 'https://32649f07ffe6607d254f7b87a95e8062@o4505921743552512.ingest.sentry.io/4506469302272000',
   integrations: [
@@ -199,7 +197,7 @@ function App() {
                 </Dialog.Trigger>
 
                 <Dialog.Portal>
-                  <Dialog.Overlay className="bg-todo_dark-50 fixed inset-0">
+                  <Dialog.Overlay className="fixed inset-0 bg-todo_dark-50">
                     <Dialog.Content
                       className={`fixed left-1/2 top-1/2 mx-auto my-0 flex 
                       w-80 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col gap-4 rounded-xl 
@@ -216,8 +214,8 @@ function App() {
                         className={`text-center text-lg
                          text-gray-600 dark:text-todo_gray-500`}
                       >
-                        Você tem certeza que gostaria de excluir este
-                        comentário?
+                        Você tem certeza que gostaria de excluir esse(s)
+                        comentário(s)?
                       </Dialog.Description>
                       <footer className="flex items-center justify-center gap-4">
                         <Dialog.Close asChild className="w-full">

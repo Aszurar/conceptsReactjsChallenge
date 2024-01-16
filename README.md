@@ -124,7 +124,7 @@ lista de tarefas.
 
   1. NodeJS
   2. React
-  3. Next
+  3. Vite
   4. Yarn(ou NPM)
   
  **Remoção de todas tarefas**

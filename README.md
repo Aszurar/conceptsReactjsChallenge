@@ -18,21 +18,21 @@ lista de tarefas.
 
 <div align="center">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3b9ff421-260b-4411-966e-183baa6e739d/deploy-status)](https://app.netlify.com/sites/todo-aszurar/deploys) [![React](https://img.shields.io/badge/-React-%2320232a.svg?style=flat&logo=react&link=https://react.dev)](https://react.dev/) [![Next](https://img.shields.io/badge/-Next-black.svg?style=flat&logo=next.js&logoColor=white&link=https://nextjs.org/)](https://nextjs.org/) [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white&link=https://tailwindcss.com/)](https://tailwindcss.com/) [![TypeScript](https://img.shields.io/badge/-TypeScript-%23007ACC?style=?style=flat-square&logo=typescript&logoColor=white&link=https://www.typescriptlang.org/)](https://www.typescriptlang.org/) [![JavaScript](https://img.shields.io/badge/-JavaScript-%23323330.svg?style=flat&logo=javascript&link=https://www.javascript.com/)](https://www.javascript.com/) [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white&link=https://developer.mozilla.org/pt-BR/docs/Web/HTML)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&link=https://www.w3schools.com/css/)](https://www.w3schools.com/css/) [![Yarn](https://img.shields.io/badge/-yarn-%232C8EBB?style=flat&logo=yarn&logoColor=white&link=https://yarnpkg.com/)](https://yarnpkg.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b9ff421-260b-4411-966e-183baa6e739d/deploy-status)](https://app.netlify.com/sites/todo-aszurar/deploys) [![React](https://img.shields.io/badge/-React-%2320232a.svg?style=flat&logo=react&link=https://react.dev)](https://react.dev/) [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white&link=https://tailwindcss.com/)](https://tailwindcss.com/) [![TypeScript](https://img.shields.io/badge/-TypeScript-%23007ACC?style=?style=flat-square&logo=typescript&logoColor=white&link=https://www.typescriptlang.org/)](https://www.typescriptlang.org/) [![JavaScript](https://img.shields.io/badge/-JavaScript-%23323330.svg?style=flat&logo=javascript&link=https://www.javascript.com/)](https://www.javascript.com/) [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white&link=https://developer.mozilla.org/pt-BR/docs/Web/HTML)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&link=https://www.w3schools.com/css/)](https://www.w3schools.com/css/) [![Yarn](https://img.shields.io/badge/-yarn-%232C8EBB?style=flat&logo=yarn&logoColor=white&link=https://yarnpkg.com/)](https://yarnpkg.com/)
 
 </div>
-
+ 
 <div align="center">
-        <h2>
-          <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
-          <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
-          <a href="#art-design">Design</a>&nbsp;|&nbsp;
-          <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
-          <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
-          <a
-          href="#truck-entrega-e-distribuição-continua">CI/CD</a>&nbsp;|&nbsp;
-          <a href="#package-como-baixar-e-executar-o-projeto">Baixar e Executar</a>&nbsp;
-        </h2>
+      <h2>
+        <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
+        <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
+        <a href="#art-design">Design</a>&nbsp;|&nbsp;
+        <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
+        <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
+        <a
+        href="#truck-entrega-e-distribuição-continua">CI/CD</a>&nbsp;|&nbsp;
+        <a href="#package-como-baixar-e-executar-o-projeto">Baixar e Executar</a>&nbsp;
+      </h2>
 </div>
 
 ---

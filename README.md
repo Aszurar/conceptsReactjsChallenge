@@ -56,7 +56,7 @@ lista de tarefas.
 - Praticamos conceitos básicos como componentização, composição, responsividade, acessibilidade, CI/CD, entre outros assim como nos projetos anteriores como o [tododark](https://github.com/Aszurar/tododark/).
 - Além disso, **abordarmos o uso do useReducer** e sua aplicação em conjunto com o **Context API** do React para o gerenciamento de estado da aplicação e separando a lógica em **actions** e **reducers**.
 - Usamos bibliotecas que auxiliam na estilização com tailwindcss como **tailwind-variants** para criarmos variações dos componentes.
-- Esse projeto foi reformulado e refeito com tecnologias atuais a partir de um projeto de desafio da trilha de 2021 de React da Rocketseat. Assim, temos algumas adições e incrementos como a criação do **tema escuro** e a possibilidade de trocar entre eles, a **construção do design do projeto no Figma**, dentre outros que serão abordados a seguir.
+- Esse projeto foi reformulado e refeito com tecnologias atuais a partir de um projeto de desafio da trilha de 2021 de React da **[Rocketseat](https://www.rocketseat.com.br/)**. Assim, temos algumas adições e incrementos como a criação do **tema escuro** e a possibilidade de trocar entre eles, a **construção do design do projeto no Figma**, dentre outros que serão abordados a seguir.
 - Usamos **[React](https://react.dev)** com **[TypeScript](https://www.typescriptlang.org/)** como principais tecnologias.
 - A animação da listagem é feita com a lib **[AutoAnimate](https://auto-animate.formkit.com/)**.
   

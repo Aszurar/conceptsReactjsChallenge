@@ -63,7 +63,7 @@ lista de tarefas.
   **Tela inicial**
 
 <div align="center" >
-      <img src="https://i.imgur.com/rkt4Jjc.png" width="1000">
+      <img src="https://i.imgur.com/rkt4Jjc.png" width="1000" alt="Tela inicial">
       <img src="https://i.imgur.com/20MSuT6.png" width="1000">
 </div>
 

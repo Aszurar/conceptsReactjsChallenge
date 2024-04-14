@@ -5,7 +5,7 @@ export function EmptyList() {
     <div className="flex flex-1 flex-col items-center justify-center gap-4">
       <img src={ClipboardIMG} alt="Lista vazia" width={56} height={56} />
       <div className="flex flex-col items-center justify-center text-center">
-        <strong className="text=center text-todo_gray-500">
+        <strong className="text-center text-todo_gray-600">
           Você ainda não tem tarefas cadastradas
         </strong>
         <span className="text-center text-todo_gray-600 dark:text-gray-300">

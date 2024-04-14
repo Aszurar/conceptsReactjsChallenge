@@ -14,6 +14,16 @@ lista de tarefas.
 
   <div align="center">
     <h3><a href="https://todo-aszurar.netlify.app">to.do</a></h3>
+
+
+
+
+
+    https://github.com/Aszurar/to.do/assets/64987824/01a1e77e-3950-4833-a2f0-d78f57bda8d2
+
+
+
+
   </div>
 
 <div align="center">
@@ -39,12 +49,12 @@ lista de tarefas.
 ---
 
 <div align="center">
-    <img src="https://i.imgur.com/JUTlzuT.gif" width="1000">
+    <img src="https://i.imgur.com/JUTlzuT.gif" width="400">
 </div>
 
 <div align="center" >
 
-**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=JYvJrERvdV4)**
+**[Vídeo no Youtube](https://www.youtube.com/watch?v=JYvJrERvdV4)**
 
 </div>
 

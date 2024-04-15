@@ -8,6 +8,8 @@
 
 - O projeto **to.do** é um projeto focado na aprendizagem e prática do uso do **[React](https://pt1.br.react.dev/)** em conjunto com **[Tailwind CSS](https://tailwindcss.com/)** para o desenvolvimento web. Para isso, criamos um aplicação de
 lista de tarefas.
+- O propósito aqui é praticar o conceito da **Context API em conjunto do useReducer** do React para **compartilhamento de dados e métodos**, além do uso de TailwindCSS e Radix UI para estilização.
+
 - A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
 - O site foi publicado com CI/CD por meio da plataforma **[Netlify](https://www.netlify.com/)**.
 - Acesse e teste o projeto em: **<https://todo-aszurar.netlify.app>**
